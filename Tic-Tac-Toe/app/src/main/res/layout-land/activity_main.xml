@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.archambault.tic_tac_toe.MainActivity"
+    style="@style/AppTheme">
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="26dp">
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content">
+
+            <Button
+                android:id="@+id/upLeft"
+                style="@style/tictactoeButton"/>
+
+            <Button
+                android:id="@+id/upMid"
+                style="@style/tictactoeButton"/>
+
+            <Button
+                android:id="@+id/upRight"
+                style="@style/tictactoeButton"
+                />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content">
+
+            <Button
+                android:id="@+id/midLeft"
+                style="@style/tictactoeButton"
+                />
+
+            <Button
+                android:id="@+id/midMid"
+                style="@style/tictactoeButton"
+                />
+
+            <Button
+                android:id="@+id/midRight"
+                style="@style/tictactoeButton"
+                />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content">
+
+            <Button
+                android:id="@+id/bottomLeft"
+                style="@style/tictactoeButton"
+                />
+
+            <Button
+                android:id="@+id/bottomMid"
+                style="@style/tictactoeButton"
+                />
+
+            <Button
+                android:id="@+id/bottomRight"
+                style="@style/tictactoeButton"
+                />
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/gameStatusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_above="@+id/gameActionButton"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/tableLayout"
+        android:layout_toEndOf="@+id/tableLayout"
+        android:text="Here is some text"
+        android:textAlignment="viewStart"
+        android:textSize="22sp"
+        android:layout_marginStart="30dp" />
+
+        <Button
+            android:id="@+id/gameActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:text="@string/newGameString"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/tableLayout"
+            android:layout_marginStart="30dp" />
+
+</RelativeLayout>
